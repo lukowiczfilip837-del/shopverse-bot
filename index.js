@@ -9,7 +9,7 @@ app.get('/', (req, res) => res.send('✅ Shopverse bot działa!'));
 app.listen(PORT, () => console.log(`🌐 Serwer działa na porcie ${PORT}`));
 
 // === KONFIGURACJA ===
-const TOKEN = 'TWÓJ_TOKEN'; // <--- Wklej tutaj swój token bota
+const TOKEN = process.env.TOKEN;
 const CHANNEL_ID = '1429037840150564876'; // <--- ID kanału, gdzie ma wysyłać wiadomość
 
 // === UTWORZENIE KLIENTA ===
@@ -103,3 +103,4 @@ client.on('messageReactionAdd', async (reaction, user) => {
 
 // === START BOTA ===
 client.login(TOKEN);
+
