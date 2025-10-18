@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: shopverse-bot
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: TOKEN
+        sync: false
